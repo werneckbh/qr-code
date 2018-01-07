@@ -10,6 +10,14 @@ Install using **composer**:
 $ composer require werneckbh/qr-code
 ```
 
+**IMPORTANT:**
+
+You **must** generate QR Code cache before running it. In the command line, run:
+
+```bash
+$ php ./vendor/werneckbh/qr-code/buildCache.php
+```
+
 ## Usage
 
 QR Code Generator for PHP supports the following QRCodes:
