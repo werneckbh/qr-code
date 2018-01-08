@@ -22,6 +22,7 @@ if (count(scandir(__DIR__ . '/../src/cache')) == 2) {
 <hr>
 <p>Examples:</p>
 <ul>
+    <li><a href="calendar.php" target="_blank">Calendar Event</a></li>
     <li><a href="email.php" target="_blank">Email Message</a></li>
     <li><a href="phone.php" target="_blank">Phone</a></li>
     <li><a href="sms.php" target="_blank">SMS</a></li>

@@ -22,6 +22,7 @@ $ php ./vendor/werneckbh/qr-code/buildCache.php
 
 QR Code Generator for PHP supports the following QRCodes:
 
+ - Calendar Event
  - Email Message
  - Phone
  - SMS
@@ -30,6 +31,27 @@ QR Code Generator for PHP supports the following QRCodes:
  - meCard
  - vCard v3
  - Wi-fi Network Settings
+ 
+ ### Calendar Event
+ 
+ ```php
+ <?php
+ 
+ use QRCode\QRCodeGenerator;
+ use QRCode\Types\QRCalendarEvent;
+
+ $startDateAndTime = new \DateTime('next saturday 7pm');
+ $endDateAndTime = new \DateTime('next saturday 11pm');
+
+ $summary = 'Dinner date with Janet Doe';
+ $description = 'Important dinner date with Janet Doe, whom you\'ve met at Tinder, at Per Se (French Restaurant)';
+ $location = 'Time Warner Center, 10 Columbus Cir, New York, NY 10023, USA';
+
+ $event = new QRCalendarEvent($startDateAndTime, $endDateAndTime, $summary, $description, $location);
+ $qr = new QRCodeGenerator($event);
+
+ $qr->generate();
+ ```
  
  ### Email Message
  
