@@ -29,6 +29,7 @@ if (count(scandir(__DIR__ . '/../src/cache')) == 2) {
     <li><a href="url.php" target="_blank">URL</a></li>
     <li><a href="meCard.php" target="_blank">meCard</a></li>
     <li><a href="vCard.php" target="_blank">vCard v3</a></li>
+    <li><a href="wifi.php" target="_blank">Wi-fi Settings</a></li>
 </ul>
 </body>
 </html>

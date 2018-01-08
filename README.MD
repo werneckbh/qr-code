@@ -29,6 +29,7 @@ QR Code Generator for PHP supports the following QRCodes:
  - URL
  - meCard
  - vCard v3
+ - Wi-fi Network Settings
  
  ### Email Message
  
@@ -137,6 +138,20 @@ QR Code Generator for PHP supports the following QRCodes:
  $qrGen = new QRCodeGenerator($vCard);
  
  echo $qrGen->generate();
+ ```
+ 
+ ### Wi-fi
+ 
+ ```php
+ <?php
+  
+ use QRCode\QRCodeGenerator;
+ use QRCode\Types\QRWifi;
+ 
+ $wifi = new QRWifi('WPA2', 'MySuperSSID', 'y0uc4n7f1ndth3p4ssw0rd');
+ $qr = new QRCodeGenerator($wifi);
+ 
+ echo $qr->generate();
  ```
  
  ## Contributing
