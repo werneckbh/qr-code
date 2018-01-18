@@ -2,11 +2,10 @@
 
 namespace QRCode\Types;
 
-use QRCode\Contracts\QRCodeType;
 use QRCode\Exceptions\EmptyEventSummaryException;
 use QRCode\Exceptions\InvalidEventDateException;
 
-class QRCalendarEvent implements QRCodeType
+class QRCalendarEvent extends GenericType
 {
     const DATETIME_FORMAT = 'Ymd\THis\Z';
 
@@ -35,6 +34,8 @@ class QRCalendarEvent implements QRCodeType
         $this->summary = $summary;
         $this->description = $description;
         $this->location = $location;
+
+        $this->init();
     }
 
     /**

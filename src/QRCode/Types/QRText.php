@@ -2,9 +2,7 @@
 
 namespace QRCode\Types;
 
-use QRCode\Contracts\QRCodeType;
-
-class QRText implements QRCodeType
+class QRText extends GenericType
 {
     protected $text;
 
@@ -16,6 +14,7 @@ class QRText implements QRCodeType
     public function __construct (string $text)
     {
         $this->text = $text;
+        $this->init();
     }
 
     /**

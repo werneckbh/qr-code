@@ -37,7 +37,6 @@ QR Code Generator for PHP supports the following QRCodes:
  ```php
  <?php
  
- use QRCode\QRCodeGenerator;
  use QRCode\Types\QRCalendarEvent;
 
  $startDateAndTime = new \DateTime('next saturday 7pm');
@@ -48,9 +47,8 @@ QR Code Generator for PHP supports the following QRCodes:
  $location = 'Time Warner Center, 10 Columbus Cir, New York, NY 10023, USA';
 
  $event = new QRCalendarEvent($startDateAndTime, $endDateAndTime, $summary, $description, $location);
- $qr = new QRCodeGenerator($event);
 
- $qr->generate();
+ echo $event->generate();
  ```
  
  ### Email Message
@@ -59,12 +57,12 @@ QR Code Generator for PHP supports the following QRCodes:
  <?php
  
  use QRCode\Types\QREmailMessage; 
- use QRCode\QRCodeGenerator;
  
  $email = new QREmailMessage('john.doe@example.com', 'Call me dude!', 'QR Code Email Message'); 
- $qr = new QRCodeGenerator($email);  
+  
  
- echo $qr->generate();
+ echo $email->generate();
+ // echo $email;
  ```
  
  ### Phone
@@ -72,13 +70,12 @@ QR Code Generator for PHP supports the following QRCodes:
  ```php
  <?php 
  
- use QRCode\QRCodeGenerator;
  use QRCode\Types\QRPhone;
 
  $phone = new QRPhone('(001) 555-1234');
- $qr = new QRCodeGenerator($phone);
 
- echo $qr->generate(); 
+ echo $phone->generate(); 
+ // echo $phone;
  ```
  
  ### SMS
@@ -86,13 +83,12 @@ QR Code Generator for PHP supports the following QRCodes:
  ```php
  <?php
  
- use QRCode\QRCodeGenerator;
  use QRCode\Types\QRSms;
  
  $sms = new QRSms('(01) 555-1234', 'text to send');
- $qr = new QRCodeGenerator($sms);
  
- echo $qr->generate();
+ echo $sms->generate();
+ // echo $sms;
  ```
  
  ### Text
@@ -100,13 +96,12 @@ QR Code Generator for PHP supports the following QRCodes:
  ```php
  <?php
  
- use QRCode\QRCodeGenerator;
  use QRCode\Types\QRText;
  
  $txt = new QRText('QR Code Generator for PHP');
- $qr = new QRCodeGenerator($txt);
  
- echo $qr->generate();
+ echo $txt->generate();
+ // echo $txt;
  ```
  
  ### URL
@@ -114,13 +109,12 @@ QR Code Generator for PHP supports the following QRCodes:
  ```php
  <?php
  
- use QRCode\QRCodeGenerator;
  use QRCode\Types\QRUrl;
  
  $url = new QRUrl('www.example.com');
- $qr = new QRCodeGenerator($url);
  
- echo $qr->generate();
+ echo $url->generate();
+ // echo $url;
  ```
  
  ### meCard
@@ -128,13 +122,12 @@ QR Code Generator for PHP supports the following QRCodes:
  ```php
  <?php
  
- use QRCode\QRCodeGenerator;
  use QRCode\Types\QRMeCard;
  
  $meCard = new QRMeCard('John Doe', '1234 Main St.', '(001) 555-1234', 'john.doe@example.com');
- $qr = new QRCodeGenerator($meCard);
  
- echo $qr->generate();
+ echo $meCard->generate();
+ // echo $meCard;
  ```
  
  ### vCard v3
@@ -146,7 +139,6 @@ QR Code Generator for PHP supports the following QRCodes:
  use QRCode\Types\VCard\Phone;
  use QRCode\Types\VCard\Address;
  use QRCode\Types\QRVCard;
- use QRCode\QRCodeGenerator;
  
  $person = new Person("John", "Doe", "Mr.", "john.doe@example.com");
  
@@ -157,9 +149,8 @@ QR Code Generator for PHP supports the following QRCodes:
  
  $vCard = new QRVCard($person, [$phone1, $phone2], [$address]);
  
- $qrGen = new QRCodeGenerator($vCard);
- 
- echo $qrGen->generate();
+ echo $vCard->generate();
+ // echo $vCard;
  ```
  
  ### Wi-fi
@@ -167,13 +158,12 @@ QR Code Generator for PHP supports the following QRCodes:
  ```php
  <?php
   
- use QRCode\QRCodeGenerator;
  use QRCode\Types\QRWifi;
  
  $wifi = new QRWifi('WPA2', 'MySuperSSID', 'y0uc4n7f1ndth3p4ssw0rd');
- $qr = new QRCodeGenerator($wifi);
  
- echo $qr->generate();
+ echo $wifi->generate();
+ // echo $wifi;
  ```
  
  ## Contributing

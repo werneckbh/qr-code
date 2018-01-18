@@ -2,9 +2,7 @@
 
 namespace QRCode\Types;
 
-use QRCode\Contracts\QRCodeType;
-
-class QRPhone implements QRCodeType
+class QRPhone extends GenericType
 {
     protected $phone;
 
@@ -16,6 +14,8 @@ class QRPhone implements QRCodeType
     public function __construct(string $phone)
     {
         $this->phone = $phone;
+
+        $this->init();
     }
 
     /**

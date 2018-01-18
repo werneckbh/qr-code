@@ -2,9 +2,7 @@
 
 namespace QRCode\Types;
 
-use QRCode\Contracts\QRCodeType;
-
-class QRWifi implements QRCodeType
+class QRWifi extends GenericType
 {
     protected $authentication;
     protected $ssid;
@@ -17,6 +15,8 @@ class QRWifi implements QRCodeType
         $this->ssid = $ssid;
         $this->password = $password;
         $this->hidden = $hidden;
+
+        $this->init();
     }
 
     /**

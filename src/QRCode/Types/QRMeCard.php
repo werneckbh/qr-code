@@ -2,9 +2,7 @@
 
 namespace QRCode\Types;
 
-use QRCode\Contracts\QRCodeType;
-
-class QRMeCard implements QRCodeType
+class QRMeCard extends GenericType
 {
     protected $name;
     protected $address;
@@ -25,6 +23,8 @@ class QRMeCard implements QRCodeType
         $this->address = $address;
         $this->phone = $phone;
         $this->email = $email;
+
+        $this->init();
     }
 
     /**

@@ -2,14 +2,13 @@
 
 namespace QRCode\Types;
 
-use QRCode\Contracts\QRCodeType;
 use QRCode\Exceptions\InvalidVCardAddressEntryException;
 use QRCode\Exceptions\InvalidVCardPhoneEntryException;
 use QRCode\Types\VCard\Address;
 use QRCode\Types\VCard\Person;
 use QRCode\Types\VCard\Phone;
 
-class QRVCard implements QRCodeType
+class QRVCard extends GenericType
 {
     /**
      * @var \QRCode\Types\VCard\Person
@@ -39,6 +38,8 @@ class QRVCard implements QRCodeType
         $this->person = $person;
         $this->phones = $phones;
         $this->addresses = $addresses;
+
+        $this->init();
     }
 
     /**

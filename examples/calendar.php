@@ -2,7 +2,6 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use QRCode\QRCodeGenerator;
 use QRCode\Types\QRCalendarEvent;
 
 $startDateAndTime = new \DateTime('next saturday 7pm');
@@ -13,6 +12,6 @@ $description = 'Important dinner date with Janet Doe, whom you\'ve met at Tinder
 $location = 'Time Warner Center, 10 Columbus Cir, New York, NY 10023, USA';
 
 $event = new QRCalendarEvent($startDateAndTime, $endDateAndTime, $summary, $description, $location);
-$qr = new QRCodeGenerator($event);
 
-$qr->generate();
+// echo $event->generate();
+echo $event;

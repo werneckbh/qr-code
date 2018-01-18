@@ -6,7 +6,6 @@ use QRCode\Types\VCard\Person;
 use QRCode\Types\VCard\Phone;
 use QRCode\Types\VCard\Address;
 use QRCode\Types\QRVCard;
-use QRCode\QRCodeGenerator;
 
 $person = new Person("John", "Doe", "Mr.", "john.doe@example.com");
 
@@ -17,6 +16,4 @@ $address = new Address('HOME', true, "1234 Main st", "New York", "NY", "12345", 
 
 $vCard = new QRVCard($person, [$phone1, $phone2], [$address]);
 
-$qrGen = new QRCodeGenerator($vCard);
-
-echo $qrGen->generate();
+echo $vCard->generate();

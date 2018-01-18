@@ -2,9 +2,7 @@
 
 namespace QRCode\Types;
 
-use QRCode\Contracts\QRCodeType;
-
-class QREmailMessage implements QRCodeType
+class QREmailMessage extends GenericType
 {
     protected $email;
     protected $message;
@@ -22,6 +20,8 @@ class QREmailMessage implements QRCodeType
         $this->email = $email;
         $this->message = $message;
         $this->subject = $subject;
+
+        $this->init();
     }
 
     /**

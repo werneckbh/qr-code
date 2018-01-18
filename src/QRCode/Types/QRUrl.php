@@ -2,9 +2,8 @@
 
 namespace QRCode\Types;
 
-use QRCode\Contracts\QRCodeType;
 
-class QRUrl implements QRCodeType
+class QRUrl extends GenericType
 {
     protected $url;
 
@@ -16,6 +15,8 @@ class QRUrl implements QRCodeType
     public function __construct (string $url)
     {
         $this->url = $url;
+
+        $this->init();
     }
 
     /**
