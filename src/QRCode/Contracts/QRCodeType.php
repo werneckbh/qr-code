@@ -14,12 +14,9 @@ interface QRCodeType
     /**
      * Generates QR Code
      *
-     * @param string $errorCorrectionLevel
-     * @param int    $pixelSize
-     * @param int    $margin
      * @return mixed
      */
-    public function generate (string $errorCorrectionLevel = 'L', int $pixelSize = 4, int $margin = 4);
+    public function generate ();
 
     /**
      * Prints QR Code

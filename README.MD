@@ -32,6 +32,8 @@ QR Code Generator for PHP supports the following QRCodes:
  - vCard v3
  - Wi-fi Network Settings
  
+Be sure to check the **examples** folder to view how it can be used, and how to set options such as _Error Correction Level_ (increases complexity), _pixel size_ and _margin_.
+ 
  ### Calendar Event
  
  ```php
