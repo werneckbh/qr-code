@@ -18,6 +18,6 @@
         }
     },
     "scripts": {
-        "post-install-cmd": "php vendor/werneckbh/qr-code/buildCache.php"
+        "post-create-project-cmd": "php vendor/werneckbh/qr-code/buildCache.php"
     }
 }
