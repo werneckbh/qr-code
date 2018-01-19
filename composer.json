@@ -16,5 +16,8 @@
         "psr-4": {
             "QRCode\\": "src/QRCode/"
         }
+    },
+    "scripts": {
+        "post-install-cmd": "php vendor/werneckbh/qr-code/buildCache.php"
     }
 }
