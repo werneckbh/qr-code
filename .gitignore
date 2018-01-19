@@ -1,5 +1,3 @@
 .idea
 composer.lock
-src/cache/**/*
-src/logs/**/*
 vendor/
