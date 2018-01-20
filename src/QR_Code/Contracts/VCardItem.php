@@ -1,21 +1,20 @@
 <?php
-
 namespace QR_Code\Contracts;
 
 /**
- * Interface CodeType
+ * Interface VCardItem
  *
  * QR Code Generator for PHP is distributed under MIT
  * Copyright (C) 2018 Bruno Vaula Werneck <brunovaulawerneck at gmail dot com>
  *
  * @package QR_Code\Contracts
  */
-interface CodeType
+interface VCardItem
 {
     /**
-     * Get Formatted QR Code String
+     * Gets vCard Item Text
      *
-     * @return string Code String
+     * @return string
      */
-    public function getCodeString () : string;
+    public function __toString () : string;
 }
