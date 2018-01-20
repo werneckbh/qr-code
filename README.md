@@ -26,13 +26,13 @@ QR Code Generator for PHP supports the following QR Codes:
 
  - Calendar Event
  - Email Message
- - Phone
- - SMS
+ - ~~Phone~~
+ - ~~SMS~~
  - Text
- - URL
+ - ~~URL~~
  - meCard
- - vCard v3
- - Wi-fi Network Settings
+ - ~~vCard v3~~
+ - ~~Wi-fi Network Settings~~
   
  ## [Contributing](CONTRIBUTING.md)
  
@@ -46,7 +46,7 @@ QR Code Generator for PHP supports the following QR Codes:
   Contributors will be added to package descriptor. Make sure you abide to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md)
   
   
-  [License](LICENSE.md)
+  ## [License](LICENSE.md)
   
   **(MIT)**
   
