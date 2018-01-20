@@ -2,9 +2,6 @@
     "name": "werneckbh/qr-code",
     "description": "QR Code Generator for PHP",
     "type": "library",
-    "require": {
-        "php": "^7.2"
-    },
     "license": "MIT",
     "authors": [
         {
@@ -12,9 +9,14 @@
             "email": "brunovaulawerneck@gmail.com"
         }
     ],
+    "require": {},
     "autoload": {
+        "files": [
+            "src/helpers/constants.php",
+            "src/helpers/functions.php"
+        ],
         "psr-4": {
-            "QRCode\\": "src/QRCode/"
+            "QR_Code\\": "src/QR_Code/"
         }
     }
 }
