@@ -1,1 +1,0 @@
-# QR Code Generator for PHP
