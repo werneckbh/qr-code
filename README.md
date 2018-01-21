@@ -10,7 +10,7 @@
  Each time you hit the button there is a chance a different QR Code with the same encoded information will be generated. 
  Independently of the number of permutations, this package will generate one and only one PNG or SVG file for each content, overwriting the latest one every time.
 
- ##Installation
+ ## Installation
 
  Install using **composer**:
 
@@ -18,7 +18,7 @@
  $ composer require werneckbh/qr-code
  ```
 
- ##QR Code Types
+ ## QR Code Types
 
  QR Code Generator for PHP supports the following QR Codes:
 
@@ -32,7 +32,7 @@
   - vCard v3
   - Wi-fi Network Settings
   
- ##[Contributing](CONTRIBUTING.md)
+ ## [Contributing](CONTRIBUTING.md)
  
  To contribute to this project, please do the following:
  
@@ -44,7 +44,7 @@
   Contributors will be added to package descriptor. Make sure you abide to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md)
   
   
-  ##[License](LICENSE.md)
+  ## [License](LICENSE.md)
   
   **(MIT)**
   
