@@ -32,6 +32,8 @@
   - vCard v3
   - Wi-fi Network Settings
   
+  Make sure you check the [Documentation](https://werneckbh.github.io/qr-code/) for further instructions.
+  
  ## [Contributing](CONTRIBUTING.md)
  
  To contribute to this project, please do the following:
