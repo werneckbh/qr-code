@@ -46,7 +46,10 @@ abstract class AbstractGenerator
      */
     public function setOutfile ($outfile)
     {
-        $this->outfile = $outfile;
+        if (is_string($outfile)) {
+            $this->outfile = $outfile;
+        }
+
         return $this;
     }
 
@@ -112,7 +115,7 @@ abstract class AbstractGenerator
 
 
     /**
-     * Stream PNG QR Code
+     * Stream and/or save PNG QR Code
      */
     public function png () : void
     {
@@ -120,7 +123,7 @@ abstract class AbstractGenerator
     }
 
     /**
-     * Stream SVG QR Code
+     * Stream and/or save SVG QR Code
      */
     public function svg () : void
     {
