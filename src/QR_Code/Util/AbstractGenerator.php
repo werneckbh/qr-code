@@ -5,6 +5,14 @@ namespace QR_Code\Util;
 use QR_Code\Contracts\CodeType;
 use QR_Code\QR_Code;
 
+/**
+ * Class AbstractGenerator
+ *
+ * QR Code Generator for PHP is distributed under MIT
+ * Copyright (C) 2018 Bruno Vaula Werneck <brunovaulawerneck at gmail dot com>
+ *
+ * @package QR_Code\Util
+ */
 abstract class AbstractGenerator
 {
     /**
@@ -34,11 +42,11 @@ abstract class AbstractGenerator
     /**
      * @var int
      */
-    protected $backColor = 0xFFFFFF;
+    protected $backColor = QR_WHITE;
     /**
      * @var int
      */
-    protected $foreColor = 0x000000;
+    protected $foreColor = QR_BLACK;
 
     /**
      * @param bool|string $outfile

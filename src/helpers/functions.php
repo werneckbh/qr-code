@@ -1,4 +1,31 @@
 <?php
+if (!function_exists('isPng'))
+{
+    /**
+     * Checks if file is a PNG image
+     *
+     * @param string $filename
+     * @return bool
+     */
+    function isPng (string $filename) : bool
+    {
+        return exif_imagetype($filename) === IMAGETYPE_PNG;
+    }
+}
+
+if (!function_exists('isSvg'))
+{
+    /**
+     * Checks if file is an SVG image
+     *
+     * @param string $filename
+     * @return bool
+     */
+    function isSvg (string $filename) : bool
+    {
+        return 'image/svg+xml' === mime_content_type($filename);
+    }
+}
 
 if (!function_exists('inString'))
 {

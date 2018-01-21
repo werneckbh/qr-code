@@ -97,3 +97,12 @@ defined('N2') ?: define('N2', 3);
 defined('N3') ?: define('N3', 40);
 defined('N4') ?: define('N4', 10);
 
+/**
+ * Colors
+ */
+
+defined('QR_WHITE') ?: define('QR_WHITE', 0xFFFFFF);
+defined('QR_BLACK') ?: define('QR_BLACK', 0x000000);
+defined('QR_RED') ?: define('QR_RED', 0xFF0000);
+defined('QR_GREEN') ?: define('QR_GREEN', 0x00FF00);
+defined('QR_BLUE') ?: define('QR_BLUE', 0x0000FF);;
