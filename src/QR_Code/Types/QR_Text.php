@@ -17,28 +17,9 @@ class QR_Text extends AbstractGenerator implements CodeType
 {
     protected $data;
 
-    /**
-     * QR_Text constructor.
-     *
-     * @param string $data Text to encode
-     */
-    public function __construct (string $data = '')
+    public function __construct (string $data)
     {
         $this->data = $data;
-    }
-
-    /**
-     * Sets text to encode
-     * 
-     * @param string $data Text to encode
-     *
-     * @return \QR_Code\Types\QR_Text
-     */
-    public function setData (string $data) : QR_Text
-    {
-        $this->data = $data;
-
-        return $this;
     }
 
     /**

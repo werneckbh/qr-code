@@ -2,6 +2,7 @@
 
 namespace QR_Code\Util;
 
+use QR_Code\Contracts\CodeType;
 use QR_Code\QR_Code;
 
 /**
@@ -61,17 +62,6 @@ abstract class AbstractGenerator
     }
 
     /**
-     * Extract outfile from options array
-     *
-     * @param array $options
-     * @return bool|string
-     */
-    public function outfile (array $options)
-    {
-        return $options['outfile'] ?? $this->outfile;
-    }
-
-    /**
      * @param string $errorCorrectionLevel
      * @return AbstractGenerator
      */
@@ -79,17 +69,6 @@ abstract class AbstractGenerator
     {
         $this->errorCorrectionLevel = $errorCorrectionLevel;
         return $this;
-    }
-
-    /**
-     * Extract error correction level from options array
-     *
-     * @param array $options
-     * @return string
-     */
-    public function errorCorrectionLevel (array $options) : string
-    {
-        return $options['errorCorrectionLevel'] ?? $this->errorCorrectionLevel;
     }
 
     /**
@@ -103,17 +82,6 @@ abstract class AbstractGenerator
     }
 
     /**
-     * Extract size from options array
-     *
-     * @param array $options
-     * @return int
-     */
-    public function size (array $options) : int
-    {
-        return $options['size'] ?? $this->size;
-    }
-
-    /**
      * @param int $margin
      * @return AbstractGenerator
      */
@@ -121,17 +89,6 @@ abstract class AbstractGenerator
     {
         $this->margin = $margin;
         return $this;
-    }
-
-    /**
-     * Extract margin from options array
-     *
-     * @param array $options
-     * @return int
-     */
-    public function margin (array $options) : int
-    {
-        return $options['margin'] ?? $this->margin;
     }
 
     /**
@@ -145,17 +102,6 @@ abstract class AbstractGenerator
     }
 
     /**
-     * Extract saveAndPrint from options array
-     *
-     * @param array $options
-     * @return bool
-     */
-    public function saveAndPrint (array $options) : bool
-    {
-        return $options['saveAndPrint'] ?? $this->saveAndPrint;
-    }
-
-    /**
      * @param int $backColor
      * @return AbstractGenerator
      */
@@ -163,17 +109,6 @@ abstract class AbstractGenerator
     {
         $this->backColor = $backColor;
         return $this;
-    }
-
-    /**
-     * Extract back color from options array
-     *
-     * @param array $options
-     * @return int
-     */
-    public function backColor (array $options) : int
-    {
-        return $options['backColor'] ?? $this->backColor;
     }
 
     /**
@@ -186,35 +121,6 @@ abstract class AbstractGenerator
         return $this;
     }
 
-    /**
-     * Extract fore color from options array
-     *
-     * @param array $options
-     * @return int
-     */
-    public function foreColor (array $options) : int
-    {
-        return $options['foreColor'] ?? $this->foreColor;
-    }
-
-    /**
-     * Set class properties
-     *
-     * @param array $options
-     * @return \QR_Code\Util\AbstractGenerator
-     */
-    public function setOptions (array $options) : AbstractGenerator
-    {
-        $this->foreColor = $this->foreColor($options);
-        $this->backColor = $this->backColor($options);
-        $this->saveAndPrint = $this->saveAndPrint($options);
-        $this->margin = $this->margin($options);
-        $this->size = $this->size($options);
-        $this->errorCorrectionLevel = $this->errorCorrectionLevel($options);
-        $this->outfile = $this->outfile($options);
-
-        return $this;
-    }
 
     /**
      * Stream and/or save PNG QR Code
