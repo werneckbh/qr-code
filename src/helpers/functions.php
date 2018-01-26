@@ -105,3 +105,20 @@ if (!function_exists('startsWith'))
         return substr($haystack, 0, strlen($needle)) === $needle;
     }
 }
+
+if (!function_exists('strSet'))
+{
+    /**
+     * I have absolutely no idea what this does
+     *
+     * @param array $srctab
+     * @param int $x
+     * @param int $y
+     * @param string $repl
+     * @param bool|int $replLen
+     */
+    function strSet (array &$srctab, int $x, int $y, string $repl, $replLen = false) : void
+    {
+        $srctab[$y] = substr_replace($srctab[$y], ($replLen !== false) ? substr($repl, 0, $replLen) : $repl, $x, ($replLen !== false) ? $replLen : strlen($repl));
+    }
+}

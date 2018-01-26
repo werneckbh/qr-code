@@ -2,8 +2,6 @@
 
 namespace QR_Code\Config;
 
-use QR_Code\Util\Str;
-
 /**
  * QR Code Specifications
  *
@@ -334,7 +332,7 @@ class Specifications
         $xStart = $ox - 2;
 
         for ($y = 0; $y < 5; $y++) {
-            Str::set($frame, $xStart, $yStart + $y, $finder[$y]);
+            strSet($frame, $xStart, $yStart + $y, $finder[$y]);
         }
     }
 
@@ -430,7 +428,7 @@ class Specifications
         ];
 
         for ($y = 0; $y < 7; $y++) {
-            Str::set($frame, $ox, $oy + $y, $finder[$y]);
+            strSet($frame, $ox, $oy + $y, $finder[$y]);
         }
     }
 
@@ -461,14 +459,14 @@ class Specifications
 
         $setPattern = str_repeat("\xc0", 8);
 
-        Str::set($frame, 0, 7, $setPattern);
-        Str::set($frame, $width - 8, 7, $setPattern);
-        Str::set($frame, 0, $width - 8, $setPattern);
+        strSet($frame, 0, 7, $setPattern);
+        strSet($frame, $width - 8, 7, $setPattern);
+        strSet($frame, 0, $width - 8, $setPattern);
 
         // Format info
         $setPattern = str_repeat("\x84", 9);
-        Str::set($frame, 0, 8, $setPattern);
-        Str::set($frame, $width - 8, 8, $setPattern, 8);
+        strSet($frame, 0, 8, $setPattern);
+        strSet($frame, $width - 8, 8, $setPattern, 8);
 
         $yOffset = $width - 8;
 
