@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/werneckbh/qr-code.svg?branch=master)](https://travis-ci.org/werneckbh/qr-code)
+
 # QR Code Generator for PHP
 
  Based on the popular library [PHP QR Code](http://phpqrcode.sourceforge.net), this package lets you create several different QR Codes.
