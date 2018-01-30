@@ -136,7 +136,7 @@ class QrCodeTests extends TestCase
         $qr = new \QR_Code\Types\QR_VCard($person, [$phone1, $phone2, $phone3], [$address]);
         $this->createQR($qr);
 
-        $this->assertTrue($this->getPNGReader()->text() === $qr->getCodeString());
+        $this->assertSame($qr->getCodeString(), $this->getPNGReader()->text());
     }
 
     public function testIfQRWifiWorks ()
