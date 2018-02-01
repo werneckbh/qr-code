@@ -32,6 +32,10 @@ class QR_VCard extends AbstractGenerator implements CodeType
      * @var \QR_Code\Types\vCard\Address[]
      */
     protected $addresses;
+    /**
+     * @var string
+     */
+    private $rev;
 
     /**
      * QR_VCard constructor.
@@ -49,6 +53,7 @@ class QR_VCard extends AbstractGenerator implements CodeType
         $this->person = $person;
         $this->phones = $phones;
         $this->addresses = $addresses;
+        $this->rev = "REV:" . (new \DateTime('NOW'))->format('Y:m:d\TH:i:s\Z') . "\n";
     }
 
     /**
@@ -97,7 +102,7 @@ class QR_VCard extends AbstractGenerator implements CodeType
 
         $response .= "{$this->person->getEmailStr()}";
 
-        $response .= "REV:" . (new \DateTime('NOW'))->format('Y:m:d\TH:i:s\Z') . "\n";
+        $response .= $this->rev;
 
         $response .= "END:VCARD";
 
