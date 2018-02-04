@@ -6,7 +6,7 @@
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
-         processIsolation="true"
+         processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="false"
 >
@@ -15,4 +15,15 @@
             <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
+
+    <!-- Code Coverage -->
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <!-- this is the path of the files included in your clover report -->
+            <directory suffix=".php">./src</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-clover" target="./clover.xml"/>
+    </logging>
 </phpunit>

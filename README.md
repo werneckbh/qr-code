@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/werneckbh/qr-code.svg?branch=master)](https://travis-ci.org/werneckbh/qr-code)
+[![Maintainability](https://api.codeclimate.com/v1/badges/156d614b78d88ec7bfe9/maintainability)](https://codeclimate.com/github/werneckbh/qr-code/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/156d614b78d88ec7bfe9/test_coverage)](https://codeclimate.com/github/werneckbh/qr-code/test_coverage)
 
 # QR Code Generator for PHP
 

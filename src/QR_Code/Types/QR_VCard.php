@@ -42,8 +42,6 @@ class QR_VCard extends AbstractGenerator implements CodeType
      * @param \QR_Code\Types\vCard\Person    $person
      * @param \QR_Code\Types\vCard\Phone[]   $phones
      * @param \QR_Code\Types\vCard\Address[] $addresses
-     * @throws \QR_Code\Exceptions\InvalidVCardAddressEntryException
-     * @throws \QR_Code\Exceptions\InvalidVCardPhoneEntryException
      */
     public function __construct (Person $person, array $phones = [], array $addresses = [])
     {

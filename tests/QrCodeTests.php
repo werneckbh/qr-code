@@ -55,10 +55,6 @@ class QrCodeTests extends TestCase
         $this->assertTrue(isSvg($this->outfileSVG), "{$this->outfileSVG} is *NOT* a SVG");
     }
 
-    /**
-     * @throws \QR_Code\Exceptions\EmptyEventSummaryException
-     * @throws \QR_Code\Exceptions\InvalidEventDateException
-     */
     public function testIfQRCalendarWorks ()
     {
         $qr = new \QR_Code\Types\QR_CalendarEvent(
@@ -119,10 +115,6 @@ class QrCodeTests extends TestCase
         $this->assertSame($qr->getCodeString(), $this->getPNGReader()->text());
     }
 
-    /**
-     * @throws \QR_Code\Exceptions\InvalidVCardAddressEntryException
-     * @throws \QR_Code\Exceptions\InvalidVCardPhoneEntryException
-     */
     public function testIfQRvCardWorks ()
     {
         $person = new \QR_Code\Types\vCard\Person('John', 'Doe', 'Mr.', 'john.doe@example.com');
@@ -137,7 +129,6 @@ class QrCodeTests extends TestCase
         $this->createQR($qr);
 
         $this->assertSame($qr->getCodeString(), $this->getPNGReader()->text());
-        //fwrite(STDERR, print_r('This test works locally but fails in TravisCI. You should uncomment this test and run it locally.', true));
     }
 
     public function testIfQRWifiWorks ()
